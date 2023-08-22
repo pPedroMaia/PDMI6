@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mauitp01.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="Black"
+                 Grid.ColumnSpan="2"
+                 Grid.RowSpan="6"/>
+        
+        <Label Text="Aplicação Teste"
+               FontSize="32"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               TextColor="White" />
+
+        <Label Text="ID: "
+               FontSize="20"
+               TextColor="White"
+               Grid.Row="1"/>
+        
+        <Border Stroke="White"
+                Grid.Column="1"
+                Grid.Row="1">
+            <Entry x:Name="LoginEnt"
+               FontSize="20"
+               TextColor="Black" />
+        </Border>
+
+        <Label Text="Pass "
+               FontSize="20"
+               TextColor="White"
+               Grid.Row="2" />
+        <Border Stroke="White"
+                Grid.Column="1"
+                Grid.Row="2">
+            <Entry x:Name="PasswordEnt"
+               FontSize="20"
+               TextColor="Black"
+               IsPassword="True"/>
+
+        </Border>
+ 
+
+        <Button x:Name="OKBtn"
+                Text="OK"
+                SemanticProperties.Hint="Validates user login and password"
+                Clicked="OnCounterClicked1"
+                BackgroundColor="Grey"
+                TextColor="Red"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center" />
+
+        <Button x:Name="CleanBtn"
+                Text="Limpar"
+                SemanticProperties.Hint="Cleans the textboxs"
+                Clicked="OnCounterClicked2"
+                BackgroundColor="Grey"
+                TextColor="Red"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center" />
+
+        <Button x:Name="CreditsBtn"
+                Text="Créditos"
+                SemanticProperties.Hint="Gives credits to the users"
+                Clicked="OnCounterClicked3"
+                BackgroundColor="Grey"
+                TextColor="Red"
+                Grid.ColumnSpan="2"
+                Grid.Row="5"
+                HorizontalOptions="Center"/>
+
+
+    </Grid>
+
+</ContentPage>
