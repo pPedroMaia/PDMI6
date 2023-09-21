@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP02.Paginas.Detalhes"
+             Title="Detalhes">
+    
+    <StackLayout Style="{StaticResource Container}">
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <FlexLayout Direction="Column"  JustifyContent="Start" AlignItems="Center">
+
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center" JustifyContent="Center"
+                            Margin="0, 0, 0, 50">
+                    <Label Text="Detalhes Tarefa" FontAttributes="Bold" FontSize="Large"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start" >
+                    <Label Text="Título:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Label x:Name="lblTitulo" Text="{Binding Title}" FontSize="Body" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Descrição:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Label x:Name="lblDescricao" Text="{Binding Description}" FontSize="Body" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Data de Criação:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Label x:Name="lblDataCriacao" Text="{Binding CreateAt}" FontSize="Body"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Prioridade:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Label x:Name="lblPrioridade" Text="{Binding Priority}" FontSize="Body"/>
+                </FlexLayout>
+            </FlexLayout>
+        </ScrollView>
+
+        <Button
+            Margin="0, 20, 0, 0"
+            Text="Editar"
+            Clicked="OnEditarClick"/>
+        <Button
+            Style="{StaticResource BtnOutline}"
+            Margin="0, 20, 0, 0"
+            Text="Excluir"
+            Clicked="OnExcluirClick"/>
+    </StackLayout>
+</ContentPage>
