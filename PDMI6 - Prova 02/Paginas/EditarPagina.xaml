@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tpfinal.Paginas.EditarPagina"
+             Title="EditarPagina">
+    <StackLayout Style="{StaticResource Container}" BackgroundColor="BurlyWood">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center" JustifyContent="Center">
+                    <Label Text="Editar Livro" FontAttributes="Bold" FontSize="Large" TextColor="Yellow"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="Nome:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Aqua"/>
+                    <Entry
+                         x:Name="txtNome"
+                         WidthRequest="300"
+                         TextColor="ForestGreen" 
+                         Text="{Binding Nome}" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="Autor:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Aqua"/>
+                    <Entry
+                      x:Name="txtAutor"
+                      WidthRequest="300"
+                      TextColor="ForestGreen" 
+                      Text="{Binding Autor}"  />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="Email:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Aqua"/>
+                    <Entry
+                      x:Name="txtEmail"
+                      WidthRequest="300"
+                      TextColor="ForestGreen" 
+                      Text="{Binding Email}"  />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="ISBN:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Aqua"/>
+                    <Entry
+                      x:Name="txtISBN"
+                      WidthRequest="300"
+                      TextColor="ForestGreen" 
+                      Text="{Binding ISBN}"  />
+                </FlexLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+        <Button
+            BackgroundColor="Aqua"
+            TextColor="ForestGreen"
+             Text="Salvar"
+             Clicked="onEdit"/>
+        <Button
+             Style="{StaticResource BtnOutline}"
+             BackgroundColor="Violet"
+             TextColor="Red"
+             Text="Cancelar"
+             Clicked="onCancel"/>
+    </StackLayout>
+</ContentPage>

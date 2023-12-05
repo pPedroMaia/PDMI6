@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tpfinal.Paginas.Creditos"
+             Title="Creditos">
+    <StackLayout Style="{StaticResource Container}" BackgroundColor="BurlyWood">
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <FlexLayout Direction="Column"  JustifyContent="Start" AlignItems="Center">
+
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center" JustifyContent="Center">
+                    <Label Text="Creditos" FontAttributes="Bold" FontSize="Large" TextColor="Yellow"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Center" >
+                    <Label Text="Pedro Henrique de Oliveira Maia dos Santos CB3013197" FontAttributes="Bold" FontSize="Large"/>
+                </FlexLayout>
+            </FlexLayout>
+        </ScrollView>
+
+        <Button
+         Style="{StaticResource BtnOutline}"
+         BackgroundColor="Orange"
+         TextColor="Yellow"
+         Text="Voltar"
+         Clicked="OnBack"/>
+    </StackLayout>
+</ContentPage>

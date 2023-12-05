@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tpfinal.Paginas.Coordenadas"
+             Title="Coordenadas">
+    <StackLayout Style="{StaticResource Container}" BackgroundColor="BurlyWood">
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <FlexLayout Direction="Column"  JustifyContent="Start" AlignItems="Center">
+
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center" JustifyContent="Center">
+                    <Label Text="Coordenadas" FontAttributes="Bold" FontSize="Large" TextColor="Yellow"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Latitude:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblLatitude" Text="{Binding Latitude}" FontSize="Body" TextColor="Yellow" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Longitude:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblLongitude" Text="{Binding Longitude}" FontSize="Body" TextColor="Yellow" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Altitude:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblAltitude" Text="{Binding Altitude}" FontSize="Body" TextColor="Yellow" />
+                </FlexLayout>
+            </FlexLayout>
+        </ScrollView>
+
+        <Button
+        Style="{StaticResource BtnOutline}"
+        TextColor="Yellow"
+        BackgroundColor="Orange"
+        Text="Voltar"
+        Clicked="OnBack"/>
+    </StackLayout>
+</ContentPage>

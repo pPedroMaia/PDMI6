@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tpfinal.Paginas.DetalhesLivros"
+             Title="DetalhesLivros">
+    <StackLayout Style="{StaticResource Container}" BackgroundColor="BurlyWood">
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <FlexLayout Direction="Column"  JustifyContent="Start" AlignItems="Center">
+
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center" JustifyContent="Center">
+                    <Label Text="Detalhes Livro" FontAttributes="Bold" FontSize="Large" TextColor="Yellow"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start" >
+                    <Label Text="Nome:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblNome" Text="{Binding Nome}" FontSize="Body" TextColor="Yellow"  />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Autor:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblAutor" Text="{Binding Autor}" FontSize="Body" TextColor="Yellow" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="Email:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblEmail" Text="{Binding Email}" FontSize="Body" TextColor="Yellow"  />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Stretch" JustifyContent="Start">
+                    <Label Text="ISBN:" FontAttributes="Bold" FontSize="Subtitle" TextColor="Orange"/>
+                    <Label x:Name="lblISBN" Text="{Binding ISBN}" FontSize="Body" TextColor="Yellow" />
+                </FlexLayout>
+
+
+            </FlexLayout>
+        </ScrollView>
+
+        <Button
+            BackgroundColor="Orange"
+            TextColor="Yellow"
+            Text="Editar"
+            Clicked="OnEditarClick"/>
+        <Button
+            Style="{StaticResource BtnOutline}"
+            BackgroundColor="Violet"
+            TextColor="Red"
+            Text="Excluir"
+            Clicked="OnExcluirClick"/>
+    </StackLayout>
+</ContentPage>
